@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
-
+import Books from '../Containers/Books';
 import './App.scss';
 
 class App extends Component {
@@ -15,6 +15,8 @@ class App extends Component {
             <div className="App">
                 <h1>{this.state.world}</h1>
                 <p>This is the react-redux boiler plate</p>
+                <h2> This is the list of books comming from Redux</h2>
+                <Books />
             </div>
         );
     }

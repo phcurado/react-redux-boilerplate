@@ -12,7 +12,9 @@ module.exports = {
                 test: /\.(js|jsx)$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
-                options: { presets: ['env'] }
+                query: {
+                    presets: ['react', 'es2015', 'stage-1']
+                }
             },
             {
                 test: /\.scss$/,

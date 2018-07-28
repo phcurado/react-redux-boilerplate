@@ -10,4 +10,4 @@ This are de recommended VS Code plugins for this boilerplate:
 -   GitLens
 -   Material Icon Theme
 
-It's recommended to turn on format-on-saveby scoping the setting: "editor.formatOnSave": true
+It's recommended to turn on format-on-save by scoping the setting: "editor.formatOnSave": true
