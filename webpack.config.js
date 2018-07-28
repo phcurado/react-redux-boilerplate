@@ -2,14 +2,10 @@ const path = require("path");
 const webpack = require("webpack");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./public/index.html",
-  filename: "./index.html"
-});
-
 module.exports = {
   entry: "./src/index.js",
   mode: "development",
+
   module: {
     rules: [
       {
@@ -26,15 +22,21 @@ module.exports = {
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    path: path.resolve(__dirname, "build/"),
-    publicPath: "/build/",
-    filename: "bundle.js"
+    path: path.resolve(__dirname, "build"),
+    filename: "bundle.js",
+    publicPath: "/"
   },
   devServer: {
     contentBase: path.join(__dirname, "public/"),
     port: 3000,
-    publicPath: "http://localhost:3000/build/",
     hotOnly: true
   },
-  plugins: [new webpack.HotModuleReplacementPlugin(), htmlPlugin]
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebPackPlugin({
+      template: "./public/index.html",
+      inject: true,
+      filename: "index.html"
+    })
+  ]
 };
