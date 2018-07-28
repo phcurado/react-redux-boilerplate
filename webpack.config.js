@@ -13,7 +13,7 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 query: {
-                    presets: ['react', 'es2015', 'stage-1']
+                    presets: ['react', 'env', 'stage-1']
                 }
             },
             {
@@ -35,7 +35,6 @@ module.exports = {
         hotOnly: true
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
         new HtmlWebPackPlugin({
             template: './public/index.html',
             inject: true,
