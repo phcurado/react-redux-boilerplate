@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "max-len": [1, 120, 2, { "ignoreComments": true }],
+    "prettier/prettier": "error"
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "globals": { "module": false, "document": false }
+}

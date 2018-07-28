@@ -1,17 +1,23 @@
-import React, { Component } from "react";
-import { hot } from 'react-hot-loader'
+import React, { Component } from 'react';
+import { hot } from 'react-hot-loader';
 
-import "./App.scss";
+import './App.scss';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <h1> Hello, World! </h1>
-        <p>This is the react-redux boiler plate</p>
-      </div>
-    );
-  }
+    constructor() {
+        super();
+        this.state = {
+            world: 'Hello World'
+        };
+    }
+    render() {
+        return (
+            <div className="App">
+                <h1>{this.state.world}</h1>
+                <p>This is the react-redux boiler plate</p>
+            </div>
+        );
+    }
 }
 
 export default hot(module)(App);
