@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import BooksReducer from './books';
 import ActiveBook from './activeBook';
+import auth from './auth';
 
-const rootReducer = combineReducers({
+const reducers = combineReducers({
     books: BooksReducer,
-    activeBook: ActiveBook
+    activeBook: ActiveBook,
+    auth
 });
 
-export default rootReducer;
+export default reducers;

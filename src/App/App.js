@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { hot } from 'react-hot-loader';
 import Books from '../Containers/Books';
 import BookDetail from '../Containers/BookDetail';
+import LoginScreen from '../Containers/LoginScreen';
 import './App.scss';
 import img from '../img/koala-windows-7-vista-and-xp-picks-27753235-500-375.jpg';
 
@@ -9,8 +10,7 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            world: 'Hello World',
-            teste: 'asdas'
+            world: 'Hello World'
         };
     }
     render() {
@@ -23,6 +23,7 @@ class App extends Component {
                 <Books />
                 <h3>Book Clicked</h3>
                 <BookDetail />
+                <LoginScreen />
             </div>
         );
     }
